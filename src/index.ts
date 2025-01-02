@@ -16,7 +16,8 @@ const bot = new Bot(tgBotToken)
 
 
 bot.on(":photo", async (ctx) => {
-  const fileId = ctx.msg.photo[0].file_id
+  const photos = ctx.msg.photo
+  const fileId = photos[photos.length-1].file_id
   await ctx.reply(`直链:\n<code>${host}/${position}/${fileId}</code>\nmarkdown:\n<code>![${fileId}]/(${host}/${position}/${fileId}/)</code>`,{parse_mode:"HTML"})
 })
 bot.on(":document", async (ctx) => {
