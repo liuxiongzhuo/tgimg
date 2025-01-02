@@ -1,0 +1,5 @@
+name = "tgimg"
+main = "src/index.ts"
+compatibility_date = "2025-01-02"
+[observability.logs]
+enabled = true
