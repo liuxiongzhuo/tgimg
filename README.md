@@ -19,13 +19,18 @@ typescript , grammy , hono
 
 网页端上传 , 图片备份
 
-效果图 :
+部署前提 :
 
-![](./images/1.png)
-![](./images/2.jpg)
+- 到 @BotFather 申请一个 bot
+- 设置 bot 的 webhooks , 方法参考 [https://blog.meteorrain.site/posts/5/](https://blog.meteorrain.site/posts/5/) 此文
 
 部署方式 :
 
 cloudflare :
 
 clone 该项目 , 运行 npm install , 复制 src/config.example.json 到 config.json , 在 config.json 里面填上自己的域名 , url 前缀 , 运行 npm run deploy .
+
+效果图 :
+
+![](./images/1.png)
+![](./images/2.jpg)

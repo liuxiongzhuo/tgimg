@@ -17,11 +17,11 @@ const bot = new Bot(tgBotToken)
 bot.on(":photo", async (ctx) => {
   const photos = ctx.msg.photo
   const fileId = photos[photos.length-1].file_id
-  await ctx.reply(`直链:\n<code>${host}/${position}/${fileId}</code>\nmarkdown:\n<code>![${fileId}]/(${host}/${position}/${fileId}/)</code>`,{parse_mode:"HTML"})
+  await ctx.reply(`直链:\n<code>${host}/${position}/${fileId}</code>\nmarkdown:\n<code>![${fileId}](${host}/${position}/${fileId})</code>`,{parse_mode:"HTML"})
 })
 bot.on(":document", async (ctx) => {
   const fileId = ctx.msg.document.file_id
-  await ctx.reply(`直链:\n<code>${host}/${position}/${fileId}</code>\nmarkdown:\n<code>![${fileId}]/(${host}/${position}/${fileId}/)</code>`,{parse_mode:"HTML"})
+  await ctx.reply(`直链:\n<code>${host}/${position}/${fileId}</code>\nmarkdown:\n<code>![${fileId}](${host}/${position}/${fileId})</code>`,{parse_mode:"HTML"})
 })
 
 // hono 接受 tg bot 的 webhooks
